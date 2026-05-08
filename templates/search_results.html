@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='homeStyle.css') }}">
+    <title>Search Results</title>
+</head>
+<body>
+    <header>
+        <div class="logo">Hotel Booking System</div>
+        <div class="nav-buttons">
+            <a href="{{ url_for('home') }}" class="btn-nav">New Search</a>
+        </div>
+    </header>
+
+    <main>
+        <h1>Results for “{{ search.destination }}”</h1>
+        <p class="subtitle">
+            Check-in: {{ search.check_in }}<br>
+            Guests: {{ search.guests or "Not specified" }}
+        </p>
+
+        <!-- Placeholder: later iterate over real hotel data -->
+        <div class="results-list">
+            <div class="result-item">
+                <h3>🏨 Sample Hotel</h3>
+                <p>⭐️⭐️⭐️⭐️ · City center · $120/night</p>
+            </div>
+            <div class="result-item">
+                <h3>🏨 Another Hotel</h3>
+                <p>⭐️⭐️⭐️ · Near beach · $95/night</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
