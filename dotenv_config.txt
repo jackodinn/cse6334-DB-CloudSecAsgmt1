@@ -1,0 +1,8 @@
+DB_NAME=DataSec
+DB_USER=flask
+DB_PASSWORD=Pa$$w0rd
+DB_SERVER=127.0.0.1 # Update with your SQL Server IP address
+
+FLASK_APP=app.py
+FLASK_ENV=development
+SECRET_KEY=TC1L_G35_CCS6344
