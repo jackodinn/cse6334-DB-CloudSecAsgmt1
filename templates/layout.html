@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='homeStyle.css') }}">
+    <title>{% block title %}Hotel Booking System{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{{ url_for('home') }}" style="text-decoration: none; color: inherit;">Hotel Booking System</a>
+        </div>
+        <div class="nav-buttons">
+            {% if current_user.is_authenticated %}
+                <span class="welcome-text">Welcome, **{{ current_user.username }}**</span>
+
+                {% if current_user.is_admin %}
+                    <a href="{{ url_for('admin_dashboard') }}" class="btn-nav btn-admin">Dashboard</a>
+                {% endif %}
+
+                <a href="{{ url_for('logout') }}" class="btn-nav">Logout</a>
+            {% else %}
+                <a href="{{ url_for('signup') }}" class="btn-nav">Sign Up</a>
+                <a href="{{ url_for('login') }}" class="btn-nav">Login</a>
+            {% endif %}
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
