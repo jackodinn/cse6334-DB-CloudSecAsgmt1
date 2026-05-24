@@ -37,15 +37,15 @@ ___
 
 8/5/2026 - Added Authentication & Authorization functions with hashed password, performed gray box testing on these modules.
 
-14/5/2026 - Added admin page, and better authentication module. **_Contributed by ZBao10_**
+14/5/2026 - Added admin page, and better authentication module.
 
 14/5/2026 - Added HTTPS using mkcert, for security feature.
 
 19/5/2026 - Added audit logs in admin page. 
           - Added Admin Approvals Board for deleting and promoting a user. 
-          - Added Freeze account feature when login attempts are more than 5 **_Contributed by ZBao10_**
+          - Added Freeze account feature when login attempts are more than 5
 
-22/5/2026 - Added 2 SQLQuarry file for adding SQLDATABASE USER, (Admin and User) **_Contributed by ZBao10_**
+22/5/2026 - Added 2 SQLQuarry file for adding SQLDATABASE USER, (Admin and User)
 
 
 
